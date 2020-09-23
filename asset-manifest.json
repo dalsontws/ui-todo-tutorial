@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ui-todo-tutorial/static/css/main.d2ba111d.chunk.css",
-    "main.js": "/ui-todo-tutorial/static/js/main.ccc2a1d8.chunk.js",
-    "main.js.map": "/ui-todo-tutorial/static/js/main.ccc2a1d8.chunk.js.map",
+    "main.js": "/ui-todo-tutorial/static/js/main.d5113e10.chunk.js",
+    "main.js.map": "/ui-todo-tutorial/static/js/main.d5113e10.chunk.js.map",
     "runtime-main.js": "/ui-todo-tutorial/static/js/runtime-main.86cf155b.js",
     "runtime-main.js.map": "/ui-todo-tutorial/static/js/runtime-main.86cf155b.js.map",
     "static/js/2.829cff69.chunk.js": "/ui-todo-tutorial/static/js/2.829cff69.chunk.js",
     "static/js/2.829cff69.chunk.js.map": "/ui-todo-tutorial/static/js/2.829cff69.chunk.js.map",
     "index.html": "/ui-todo-tutorial/index.html",
-    "precache-manifest.6006b03504449eba96465ec4c0fccb76.js": "/ui-todo-tutorial/precache-manifest.6006b03504449eba96465ec4c0fccb76.js",
+    "precache-manifest.65615925dda1477eb979a5a2f6b2a68d.js": "/ui-todo-tutorial/precache-manifest.65615925dda1477eb979a5a2f6b2a68d.js",
     "service-worker.js": "/ui-todo-tutorial/service-worker.js",
     "static/css/main.d2ba111d.chunk.css.map": "/ui-todo-tutorial/static/css/main.d2ba111d.chunk.css.map",
     "static/js/2.829cff69.chunk.js.LICENSE.txt": "/ui-todo-tutorial/static/js/2.829cff69.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.86cf155b.js",
     "static/js/2.829cff69.chunk.js",
     "static/css/main.d2ba111d.chunk.css",
-    "static/js/main.ccc2a1d8.chunk.js"
+    "static/js/main.d5113e10.chunk.js"
   ]
 }
