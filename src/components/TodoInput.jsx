@@ -12,6 +12,7 @@ export const TodoInput = () => {
   const handleAddClick = async () => {
     const id = uuidv4();
     const test = await firebaseApi.addTodo(id, inputValue);
+    console.log(test);
     dispatch(addTodo(id, inputValue));
     setInputValue('');
   };

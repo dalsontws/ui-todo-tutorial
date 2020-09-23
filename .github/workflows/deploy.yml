@@ -10,8 +10,8 @@ on:
 jobs:
   main:
     name: build and deploy application
-    runs-on: ubuntu-latest              # Type of machine to run job on
-    strategy:                           # Define different variations of an environment to run job
+    runs-on: ubuntu-latest # Type of machine to run job on
+    strategy: # Define different variations of an environment to run job
       matrix:
         node-version: [12.x]
 
@@ -31,9 +31,11 @@ jobs:
         run: npm install
 
       # TODO: Add a stage for running unit tests
-
+      - name: run unit tests
+        run: npm run test
       # TODO: Add a stage for running cypress tests
-
+      # - name: run cyrpres testsssssss
+      #   run: npm run cypress:open
       # TODO: Add a stage to generate cypress videos and screenshots as artifacts
 
       # Stage to deploy application to github page
