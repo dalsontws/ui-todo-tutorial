@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
-import { Button } from "antd";
-import { TodoContext } from "../context/TodoContextProvider";
+import React, { useContext, useEffect } from 'react';
+import { Button } from 'antd';
+import { TodoContext } from '../context/TodoContextProvider';
+import { deleteTodo, setTodos } from '../context/todo.actions';
+import { firebaseApi } from '../services/firebaseApi';
 
 const TodoTask = (props) => {
   return (
@@ -31,20 +33,26 @@ const TodoTask = (props) => {
 };
 
 export const TodoList = () => {
-  const { state } = useContext(TodoContext);
+  const { state, dispatch } = useContext(TodoContext);
 
-  // useEffect(() => {
-  //   const fetchTodos = async () => {
-  //     const todos = await firebaseApi.fetchTodos();
-  //     dispatch(setTodos(todos));
-  //   }
+  useEffect(() => {
+    const fetchTodos = async () => {
+      const todos = await firebaseApi.fetchTodos();
+      dispatch(setTodos(todos));
+    };
 
-  //   fetchTodos();
-  // }, [dispatch]);
+    fetchTodos();
+  }, [dispatch]);
 
-  const handleDeleteTodo = (id) => {
-    // TODO: fill in
+  const handleDeleteTodo = async (id) => {
+    const todos = await firebaseApi.deleteTodo(id);
+    // dispatch(setTodos(todos));
+    dispatch(deleteTodo(id));
   };
+
+  // const handleUpdateTodo = (id, description) => {
+  //   dispatch(updateTodo(id, description));
+  // };
 
   return (
     <div className="todo-list" data-cy="todo-list">

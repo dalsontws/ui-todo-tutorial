@@ -1,19 +1,20 @@
-import { Button, Input } from "antd";
-import React, { useContext, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { addTodo } from "../context/todo.actions";
-import { TodoContext } from "../context/TodoContextProvider";
+import { Button, Input } from 'antd';
+import React, { useContext, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { addTodo } from '../context/todo.actions';
+import { TodoContext } from '../context/TodoContextProvider';
+import { firebaseApi } from '../services/firebaseApi';
 
 export const TodoInput = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const { dispatch } = useContext(TodoContext);
 
-  const handleAddClick = () => {
+  const handleAddClick = async () => {
     const id = uuidv4();
-
+    const test = await firebaseApi.addTodo(id, inputValue);
     dispatch(addTodo(id, inputValue));
-    setInputValue("");
-  }
+    setInputValue('');
+  };
 
   return (
     <div className="todo-input">
